@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="NPV/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="NPV/npv.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+   </div>
+	<div class="mainbody">
+		<form id = "loginForm" class="animate" method="get">
+			<div id= "npvQADIv">
+				<label> Client:</label><select id ="clientId" onchange= "fillProjectId()">
+			  		<option value="">Select Client</option>
+			  		<option value="1">FNB</option>
+			  		<option value="2">CELLC</option>
+			  		<option value="3">NedBank</option>
+			  		<option value="4">ABSA</option>
+			  		<option value="5">PPS</option>
+			  		<option value="6">CentiMark</option>
+			  		</select>
+		  		<label> Project:</label><select id ="projectId" onchange= "fillGenerateId()">
+			  		<option value="">Select Project</option>
+			  	</select>
+		  		<label> Generate Id:</label><select id ="generateId">
+			  		<option value="">Select Generate Id</option>
+			  	</select><br><br>
+				<label> Filter:</label><select id ="FilterChar">
+			  		<option value="">Select Filter</option>
+			  		<option value="A">A</option>
+			  		<option value="B">B</option>
+			  		<option value="C">C</option>
+			  		<option value="D">D</option>
+			  		<option value="E">E</option>
+			  		<option value="F">F</option>
+			  		<option value="G">G</option>
+			  		<option value="H">H</option>
+			  		<option value="I">I</option>
+			  		<option value="J">J</option>
+			  		<option value="K">K</option>
+			  		<option value="L">L</option>
+			  		<option value="M">M</option>
+			  		<option value="N">N</option>
+			  		<option value="O">O</option>
+			  		<option value="P">P</option>
+			  		<option value="Q">Q</option>
+			  		<option value="R">R</option>
+			  		<option value="S">S</option>
+			  		<option value="T">T</option>
+			  		<option value="U">U</option>
+			  		<option value="V">V</option>
+			  		<option value="W">W</option>
+			  		<option value="X">X</option>
+			  		<option value="Y">Y</option>
+			  		<option value="Z">Z</option>
+		  		</select>
+		  		<label> User:</label><select id ="auditUser">
+		  			<option value ="">Select User</option>
+		  			<option value="Bobby">Bobby</option>
+		  			<option value="Genen">Genen</option>
+		  			<option value="Jennie">Jennie</option>
+		  			<option value="Johnny">Johnny</option>
+		  			<option value="Kevin">Kevin</option>
+		  			<option value="Martin">Martin</option>
+		  			<option value="Ravi">Ravi</option>
+		  			<option value="Shriyan">Shriyan</option>
+		  			<option value="Thomas">Thomas</option>
+		  		</select>	
+			  	<button id ="populateTable" type="button">Get Records</button><br><br>
+			  	
+			  	<table id="QAtable" class="" cellspacing="0" width="100%">
+			        </table><br>
+		        <label> QA Result:</label><select id ="QAResult">
+		  			<option>Select option</option>
+		  			<option value=true>Pass</option>
+		  			<option value=false>Fail</option>
+	  			</select>
+	  			<input type="text" class = "txt" id="txtFailReason" Placeholder="Enter Failure Reason" style="width:300px">
+	  			<button id ="submitQaResults" type="button">Submit Results</button><br><br>
+			  	<video id="myVideo" width="700" height="600" controls>
+				</video>
+				<div style=float:right>
+				<img id ="thumbnail" width=525 height="600"></img>
+				</div>
+				
+			</div>
+		</form>
+	</div>
+	<div class="footer">
+	</div>	
+</div>	
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.js"></script> 
+	<script src="NPV/jquery.dataTables.min.js"></script>
+	 
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- script src="NPV/NpvQA.js"></script> -->
+	<!-- script src="NPV/NpvQA_centi.js"></script>-->
+	<script src="NPV/NpvQA_pps.js"></script>
+	<!-- script src="NPV/NpvQA_client.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+	<!-- script src="NPV/jquery.csv.min.js"></script>-->
+	<!--<script src='js/csv_to_html_table.js'></script>-->
+	
+</body>
+</html>

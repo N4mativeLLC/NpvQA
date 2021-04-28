@@ -1,0 +1,7 @@
+tr.row_selected td
+{background-color:red !important;}
+
+#QAtable > thead{
+	color:white;
+	text-align: left;
+}
